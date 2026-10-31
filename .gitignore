@@ -16,3 +16,6 @@ earthquake_dbt/logs/
 earthquake_dbt/dbt_packages/
 
 .DS_Store
+
+earthquake_dbt/.user.yml
+logs/
