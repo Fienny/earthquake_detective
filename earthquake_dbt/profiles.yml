@@ -1,0 +1,29 @@
+# File 2: earthquake_dbt/profiles.yml
+
+# Requirements:
+# 1. Profile name: earthquake_detective
+# 2. Default target: dev
+# 3. Database adapter: duckdb
+# 4. Database file: ../earthquakes.duckdb relative to earthquake_dbt
+# 5. Number of threads: 4
+
+# Connection hierarchy
+
+# earthquake_detective
+#   target → dev
+
+#     outputs
+#       dev
+#       type → duckdb
+
+#       path → ../earthquakes.duckdb
+
+#       threads → 4
+
+earthquake_detective:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../earthquakes.duckdb
+      threads: 4

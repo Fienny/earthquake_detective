@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_earthquakes
+    description: "Staging models for earthquake data"
+    columns:
+      - name: event_id
+        description: "Unique identifier for each earthquake event"
+        tests:
+          - not_null
+          - unique
+      - name: magnitude
+        description: "Magnitude of the earthquake event"
+        tests:
+          - not_null
+      - name: latitude
+        description: "Latitude of the earthquake event"
+        tests:
+          - not_null
+      - name: longitude
+        description: "Longitude of the earthquake event"
+        tests:
+          - not_null
+      - name: depth_km
+        description: "Depth of the earthquake event in kilometers"
+        tests:
+          - not_null
+      - name: event_time
+        description: "Timestamp of an event"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "Last updated timestamp of an event"
+        tests:
+          - not_null

@@ -1,0 +1,22 @@
+# Requirements:
+# 1. Project name: earthquake_detective
+# 2. Project version: 1.0.0
+# 3. Configuration version: 2
+# 4. Connection profile: earthquake_detective
+# 5. Models live in the models directory
+# 6. Models inside staging should be SQL views
+# 7. Models inside marts should be physical tables
+
+name: earthquake_detective
+version: 1.0.0
+config-version: 2
+profile: earthquake_detective
+
+model-paths: ["models"]
+
+models:
+  earthquake_detective:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
